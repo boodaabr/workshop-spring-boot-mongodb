@@ -63,13 +63,13 @@ public class UserResource {
 		return ResponseEntity.noContent().build();
 	}
 	
-	/*@GetMapping(value="/{id}/posts")
+	@GetMapping(value = "/{id}/posts")
 	public ResponseEntity<List<Post>> findPosts(@PathVariable String id) {
 
 		User obj = service.findById(id);
-		
-		return ResponseEntity.ok().body(obj.);
-	}*/
+
+		return ResponseEntity.ok().body(obj.getPosts());
+	}
 
 	@PutMapping(value="/{id}")
 	public ResponseEntity<Void> update(@RequestBody UserDto objDto,@PathVariable String id) {
